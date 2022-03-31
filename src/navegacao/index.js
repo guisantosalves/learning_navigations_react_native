@@ -13,7 +13,8 @@ export default (props) => {
         <SafeAreaView style={{flex: 1}}>
             <NavigationContainer>
                 <Stack />
+                {/* index -> stack -> PassoStack(recebe Tela e renderiza como children) */}
             </NavigationContainer>
         </SafeAreaView>
-    )  
+    )
 }

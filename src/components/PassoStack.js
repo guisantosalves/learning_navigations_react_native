@@ -1,3 +1,4 @@
+import { parse } from '@babel/core';
 import React from 'react';
 import {View, Text, Button} from 'react-native';
 
@@ -23,7 +24,12 @@ export default props => {
           <Button
             title="avançar"
             onPress={() => {
-              props.navigation.navigate(props.avancar);
+              props.navigation.push(
+                props.avancar, 
+                {
+                  numero: parseInt(Math.random() * 100)
+                }
+              );
             }}
           />
         ) : (

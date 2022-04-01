@@ -3,6 +3,7 @@ import TextoCentral from '../components/TextoCentral'
 
 
 export default (props) => {
+    console.warn(props.route.params)
     return(
         <TextoCentral corFundo='#3b82c4'>
             Tela B

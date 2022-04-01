@@ -6,7 +6,19 @@ export default props => {
     <View style={{flex: 1}}>
         {/* primeiro renderiza o botao e depois o props.children */}
         
-      <View>
+      <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+      {/* renderização condicional voltar */}
+      {props.voltar ? (
+          <Button
+            title="voltar"
+            onPress={() => {
+              props.navigation.goBack();
+            }}
+          />
+        ) : (
+          false
+        )}
+        {/* renderização condicional avançar */}
         {props.avancar ? (
           <Button
             title="avançar"
